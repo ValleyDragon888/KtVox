@@ -12,7 +12,7 @@ data class Window(
         pixels.forEach {row ->
             var rowAsString = ""
             row.forEach {
-                rowAsString += it.char
+                rowAsString += it.extract()
             }
             toPrint += rowAsString + "\n"
         }
