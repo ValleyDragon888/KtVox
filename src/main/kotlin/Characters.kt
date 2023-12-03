@@ -1,4 +1,4 @@
-import javax.xml.stream.events.Characters
+
 
 class _Characters {
     // TODO: https://www.w3.org/TR/xml-entity-names/025.html

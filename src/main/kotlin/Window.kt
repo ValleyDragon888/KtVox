@@ -8,10 +8,10 @@ data class Window(
     }
 ) {
     fun printScreen() {
-        var toPrint: String = ""
-        pixels.forEach() {row ->
-            var rowAsString:String = ""
-            row.forEach {it ->
+        var toPrint = ""
+        pixels.forEach {row ->
+            var rowAsString = ""
+            row.forEach {
                 rowAsString += it.char
             }
             toPrint += rowAsString + "\n"

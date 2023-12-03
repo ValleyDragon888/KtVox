@@ -1,8 +1,6 @@
-import Pixel
-import Window
 
 fun main() {
-    var w = Window(20, 20)
+    val w = Window(20, 20)
     for(i in 0..10) {
         w.clear()
         w.drawBoxOutline("single", XYPosition(0, 0), XYPosition(19, 19))
