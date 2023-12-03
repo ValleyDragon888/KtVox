@@ -3,8 +3,11 @@ import Window
 
 fun main() {
     var w = Window(20, 20)
-    w.printScreen()
-
-    w.drawBoxOutline("double", XYPosition(0, 0), XYPosition(2, 2))
-    w.printScreen()
+    for(i in 0..10) {
+        w.clear()
+        w.drawBoxOutline("single", XYPosition(0, 0), XYPosition(19, 19))
+        w.putPixel(20, 20, Pixel(Characters.ShadedBoxes.fullLightGray))
+        w.printScreen()
+        Thread.sleep(1000)
+    }
 }

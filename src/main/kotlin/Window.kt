@@ -1,8 +1,8 @@
 data class Window(
     val width: Int,
     val height: Int,
-    var pixels: Array<Array<Pixel>> = Array(height) {
-        Array(width){
+    var pixels: Array<Array<Pixel>> = Array(height+1) {
+        Array(width+1){
             Pixel(" ",null,null)
         }
     }
@@ -104,5 +104,15 @@ data class Window(
             XYPosition(bottomRight.x, bottomRight.y-1),
             lineType=lineType)
     }
+
+    fun fillWith(toFillWith:Pixel) {
+        this.pixels = Array(height+1) {
+            Array(width+1){
+                toFillWith
+            }
+        }
+    }
+
+    fun clear() {fillWith(Pixel(" "))}
 
 }
