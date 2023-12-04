@@ -1,7 +1,7 @@
-data class PixelArray(
-    val width: Int,
-    val height: Int,
-    var pixels: Array<Array<Pixel>> = Array(height+1) {
+open class PixelArray(
+    open val width: Int,
+    open val height: Int,
+    open var pixels: Array<Array<Pixel>> = Array(height+1) {
         Array(width+1){
             Pixel(" ",null,null)
         }
