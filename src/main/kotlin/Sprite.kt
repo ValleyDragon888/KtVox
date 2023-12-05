@@ -1,7 +1,17 @@
-class Sprite(width: Int, height: Int) : PixelArray(width, height) {
+class Sprite(width: Int, height: Int, pixels: Array<Array<Pixel>> = Array(height+1) {
+    Array(width+1){
+        Pixel(" ",null,null)
+    }
+}) : PixelArray(width, height) {
 
     init {
         var position:XYPosition = XYPosition(0, 0)
+        }
+
+    fun setImage(image:PixelArray) {
+        pixels = image.pixels
+        width = image.width
+        height = image.height
     }
 
     fun toDoubleLines() {
@@ -20,8 +30,7 @@ class Sprite(width: Int, height: Int) : PixelArray(width, height) {
                     Pixel(Characters.SingleLine.horizontalAndDown) -> Pixel(Characters.DoubleLine.horizontalAndDown)
                     Pixel(Characters.SingleLine.horizontalAndUp) -> Pixel(Characters.DoubleLine.horizontalAndUp)
                     Pixel(Characters.SingleLine.horizontalAndVerticalCrossover) -> Pixel(Characters.DoubleLine.horizontalAndVerticalCrossover)
-
-                        else -> pixel
+                    else -> pixel
                 })
             }
         }

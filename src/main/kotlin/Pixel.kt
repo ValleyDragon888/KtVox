@@ -1,18 +1,11 @@
 data class Pixel(
-    val char: String,
-    val forwardFormatting: String? = null,
-    val backwardFormatting: String? = null
+    var char: String,
+    var backgroundColour: String? = null,
+    var textColour: String? = null
 ) {
     fun extract():String {
-        var out = ""
-        if(forwardFormatting != null) {
-            out += forwardFormatting
-        }
-        out += char
-        if(backwardFormatting != null) {
-            out += backwardFormatting
-        }
-        return out
-
+        return (backgroundColour?:"") +
+                (textColour?:"") +
+                char + Formatting.reset
     }
 }

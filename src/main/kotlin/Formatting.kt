@@ -3,9 +3,9 @@
 class _Formatting {
     val TextColour = _TextColour()
     val BackgroundColour = _BackgroundColour()
+    val reset = "\u001B[0m"
 
     class _TextColour {
-        val reset = "\u001B[0m"
         val black = "\u001B[30m"
         val red = "\u001B[31m"
         val green = "\u001B[32m"

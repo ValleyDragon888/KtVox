@@ -1,6 +1,6 @@
 data class Window(
-    override val width: Int,
-    override val height: Int,
+    override var width: Int,
+    override var height: Int,
     override var pixels: Array<Array<Pixel>> = Array(height+1) {
         Array(width+1){
             Pixel(" ",null,null)
