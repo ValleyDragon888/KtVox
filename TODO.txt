@@ -1,12 +1,12 @@
 ==Whenever==
+1. keyboard
 
-==0.2==
-
-1. Add colour
-https://stackoverflow.com/questions/5762491/how-to-print-color-in-console-using-system-out-printlnt
 ==0.3==
 1. Sprites
 
 ==0.4==
 1. text to screen
 2. simon ascii art for text
+
+==1.0==
+1.docs
