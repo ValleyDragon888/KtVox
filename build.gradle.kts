@@ -12,6 +12,7 @@ repositories {
 
 dependencies {
     testImplementation(kotlin("test"))
+    implementation("com.sun.jna:jna:3.0.9")
 }
 
 tasks.test {

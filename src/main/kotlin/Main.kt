@@ -1,3 +1,4 @@
+import RawConsoleInput
 
 fun main() {
     val w = Window(20, 20)
