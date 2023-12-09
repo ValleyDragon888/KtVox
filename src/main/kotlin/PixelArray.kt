@@ -105,4 +105,16 @@ open class PixelArray(
 
     fun clear() {fillWith(Pixel(" "))}
 
+    fun render():String {
+        var toPrint = ""
+        pixels.forEach {row ->
+            var rowAsString = ""
+            row.forEach {
+                rowAsString += it.extract()
+            }
+            toPrint += rowAsString + "\n"
+        }
+        return toPrint
+    }
+
 }

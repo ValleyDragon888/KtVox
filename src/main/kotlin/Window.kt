@@ -7,17 +7,7 @@ data class Window(
         }
     }
 ) : PixelArray(width, height) {
-    fun printScreen() {
-        var toPrint = ""
-        pixels.forEach {row ->
-            var rowAsString = ""
-            row.forEach {
-                rowAsString += it.extract()
-            }
-            toPrint += rowAsString + "\n"
-        }
-        println(toPrint)
-    }
+    fun printScreen() { print(render()) }
 
     
 }
