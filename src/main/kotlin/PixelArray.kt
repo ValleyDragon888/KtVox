@@ -1,3 +1,5 @@
+
+
 open class PixelArray(
     open var width: Int,
     open var height: Int,
@@ -7,7 +9,6 @@ open class PixelArray(
         }
     }
 ) {
-    
 
     fun putPixel(
         x:Int,
@@ -16,6 +17,8 @@ open class PixelArray(
     ) {
         pixels[y][x] = pixel
     }
+
+    fun putPixel(pos:XYPosition, pixel: Pixel) { putPixel(pos.x, pos.y, pixel) }
 
     fun drawHorizonatalLine(
         start:XYPosition,
@@ -115,6 +118,18 @@ open class PixelArray(
             toPrint += rowAsString + "\n"
         }
         return toPrint
+    }
+
+    fun blitSprite(sprite: Sprite) {
+        blitPixelArray(sprite.pixels, sprite.position)
+    }
+
+    fun blitPixelArray(pixelArray: PixelArray, position: XYPosition) {
+        pixelArray.pixels.forEachIndexed() {y, line ->
+            line.forEachIndexed() {x, pixel ->
+                putPixel(XYPosition(x, y), pixel)
+            }
+        }
     }
 
 }
