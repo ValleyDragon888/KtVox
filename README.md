@@ -1,7 +1,8 @@
 # nexus
 A kotlin-powered game engine for the terminal
 
+Docs: https://valleydragon888.github.io/KtVox_docs/homepage.html
+
 So, yes. An ASCII art game engine.
 It's still a work in progress though - 
-but its nearly finished, and when it is, I will release the docs.
-So keep looking back!
+but its nearly finished! 
